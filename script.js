@@ -8,6 +8,7 @@ const resBtn = document.querySelector(".resBtn");
 const menuBtn = document.querySelector(".menuBtn");
 const alertt = document.querySelector(".alert");
 const closeBtn = document.querySelector(".closeBtn");
+const onWin = document.querySelector(".onWin");
 
 function callAlert() {
   alertt.classList.add("show");
@@ -116,8 +117,8 @@ function checkGameOver() {
   });
   //it means we have a winner
   if (answer !== "") {
-    comp ? comp=false: multi;
     onWin.classList.add("active");
+    comp ? comp=false: multi;
     gameInfo.innerText = `Winner - ${answer}`;
     resBtn.classList.remove("active");
     menuBtn.classList.remove("active");
@@ -125,7 +126,7 @@ function checkGameOver() {
     setTimeout(() => {
       multi ? multi : comp=true;
       onWin.classList.remove("active");
-    }, 700);
+    }, 600);
     return;
   }
   let fillCount = 0;
