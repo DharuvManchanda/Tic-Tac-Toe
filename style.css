@@ -11,13 +11,6 @@ html{
 body {
   background: #14bdac;
 }
-.onWin{
-display: none;
-transition:all 5s ease;
-}
-.onWin.active{
-display: block;
-}
 .Wrapper {
   overflow: hidden;
   margin-top: 50px;
@@ -27,6 +20,13 @@ display: block;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+.onWin{
+display: none;
+transition:all 5s ease;
+}
+.onWin.active{
+display: block;
 }
 .btn {
   box-shadow: #12d0bd 0px 5px 15px 0px;
@@ -113,7 +113,6 @@ display: block;
 
 .alert {
   z-index: 100;
-  background: #0c8d80;
   background: #0da192;
   padding: 20px 40px;
   box-shadow: #12d0bd 0px 5px 15px 0px;
