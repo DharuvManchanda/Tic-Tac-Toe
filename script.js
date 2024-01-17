@@ -38,6 +38,7 @@ const winningPos = [
 ];
 //intialised game
 function initGame() {
+  onWin.classList.remove("active");
   currentPlayer = "X";
   gameGrid = ["", "", "", "", "", "", "", "", ""];
   boxes.forEach((box, index) => {
@@ -115,6 +116,7 @@ function checkGameOver() {
   });
   //it means we have a winner
   if (answer !== "") {
+    onWin.classList.add("active");
     comp ? comp=false: multi;
     gameInfo.innerText = `Winner - ${answer}`;
     resBtn.classList.remove("active");
@@ -122,7 +124,8 @@ function checkGameOver() {
     newGameIn.classList.add("active");
     setTimeout(() => {
       multi ? multi : comp=true;
-    }, 1000);
+      onWin.classList.remove("active");
+    }, 700);
     return;
   }
   let fillCount = 0;
