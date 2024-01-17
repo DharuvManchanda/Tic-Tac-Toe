@@ -11,6 +11,13 @@ html{
 body {
   background: #14bdac;
 }
+.onWin{
+display: none;
+transition:all 5s ease;
+}
+.onWin.active{
+display: block;
+}
 .Wrapper {
   overflow: hidden;
   margin-top: 50px;
