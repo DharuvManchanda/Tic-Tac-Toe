@@ -116,8 +116,8 @@ function checkGameOver() {
   });
   //it means we have a winner
   if (answer !== "") {
-    onWin.classList.add("active");
     comp ? comp=false: multi;
+    onWin.classList.add("active");
     gameInfo.innerText = `Winner - ${answer}`;
     resBtn.classList.remove("active");
     menuBtn.classList.remove("active");
